@@ -1,0 +1,31 @@
+# commands
+create user pwd1 100
+login user pwd1
+quit
+*
+# Possible outcome 1
+Created user user
+Logged in as user
+Goodbye
+|
+Failed to create user
+Login failed
+Goodbye
+*
+########### Terminal 2 #############
+#
+# commands
+create user pwd2 100
+login user pwd2
+quit
+*
+# Possible outcome 1
+Failed to create user
+Login failed
+Goodbye
+|
+# Possible outcome 2
+Created user user
+Logged in as user
+Goodbye
+*
