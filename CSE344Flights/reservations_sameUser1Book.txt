@@ -1,0 +1,83 @@
+# commands
+create user1 user1 10000
+login user1 user1
+search "New York NY" "Los Angeles CA" 1 2 1
+book 0
+reservations
+quit
+*
+# Possible output 1
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 339 minutes
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+|
+# Possible output 2
+Failed to create user
+Logged in as user1
+Itinerary 0: 1 flight(s), 339 minutes
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+|
+# Possible output 3
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 339 minutes
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+|
+# Possible output 4
+Failed to create user
+Logged in as user1
+Itinerary 0: 1 flight(s), 339 minutes
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+*
+#
+########## Terminal 2 ############
+#
+# commands
+create user1 user1 10000
+login user1 user1
+reservations
+quit
+*
+# Possible output 1
+Failed to create user
+Logged in as user1
+No reservations found
+Goodbye
+|
+# Possible output 2
+Created user user1
+Logged in as user1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+|
+# Possible output 3
+Failed to create user
+Logged in as user1
+Reservation 1 paid: false:
+ID: 720209 Day: 2 Carrier: B6 Number: 23 Origin: New York NY Dest: Los Angeles CA Duration: 339 Capacity: 9 Price: 563
+Goodbye
+|
+# Possible output 4
+Created user user1
+Logged in as user1
+No reservations found
+Goodbye
+*
